@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CR7 — The Road to 1000 Goals | Legend Status</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background Decorative Glow -->
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <!-- Header / Hero Section -->
+  <header>
+    <div class="cr7-avatar-container">
+      <img src="images/profile.jpg" alt="Cristiano Ronaldo" class="cr7-avatar">
+    </div>
+    
+    <div class="badge">CR7 • THE GREATEST OF ALL TIME</div>
+    <h1>CRISTIANO RONALDO</h1>
+    <p class="subtitle">The Official Countdown to 1,000 Career Goals</p>
+  </header>
+
+  <main>
+    <!-- Countdown to 1000 Goals Section -->
+    <section class="card goal-tracker-card">
+      <div class="card-header">
+        <h2>🔥 1,000 GOALS HUNT</h2>
+        <span class="live-tag">LIVE STATS</span>
+      </div>
+
+      <div class="stats-display">
+        <div class="stat-main">
+          <span class="stat-number" id="goals-count">0</span>
+          <span class="stat-label">Official Career Goals</span>
+        </div>
+        <div class="stat-divider">/</div>
+        <div class="stat-target">
+          <span class="stat-number">1,000</span>
+          <span class="stat-label">Ultimate Goal</span>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progress-bar" style="width: 0%;"></div>
+      </div>
+      
+      <div class="progress-info">
+        <span>Progress: <strong id="progress-percent">0%</strong> Completed</span>
+        <span class="goals-remaining">⚡ Only <strong id="goals-remaining">0</strong> Goals Left!</span>
+      </div>
+    </section>
+
+    <!-- Key Records & Trophies Grid -->
+    <section class="grid-section">
+      <h3>🏆 Career Achievements & Records</h3>
+      
+      <div class="stats-grid">
+        <div class="grid-card">
+          <div class="icon">🏆</div>
+          <h4>5x</h4>
+          <p>UEFA Champions League</p>
+        </div>
+
+        <div class="grid-card">
+          <div class="icon">⚽</div>
+          <h4>5x</h4>
+          <p>Ballon d'Or Winner</p>
+        </div>
+
+        <div class="grid-card">
+          <div class="icon">👑</div>
+          <h4>140</h4>
+          <p>UCL All-Time Top Scorer</p>
+        </div>
+
+        <div class="grid-card">
+          <div class="icon">🇵🇹</div>
+          <h4>133+</h4>
+          <p>International Goals (Record)</p>
+        </div>
+
+        <div class="grid-card">
+          <div class="icon">👟</div>
+          <h4>4x</h4>
+          <p>European Golden Shoes</p>
+        </div>
+
+        <div class="grid-card">
+          <div class="icon">🎯</div>
+          <h4>60+</h4>
+          <p>Direct Free Kick Goals</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CR7 Photo Gallery Section -->
+    <section class="grid-section">
+      <h3>📸 Legend Moments Gallery</h3>
+      <div class="gallery-grid">
+        <div class="gallery-card">
+          <img src="images/gallery1.jpg" alt="Portugal Pride">
+          <div class="gallery-caption">Portugal Pride 🇵🇹</div>
+        </div>
+        <div class="gallery-card">
+          <img src="images/gallery2.jpg" alt="UCL King">
+          <div class="gallery-caption">UCL King 👑</div>
+        </div>
+        <div class="gallery-card">
+          <img src="images/gallery3.jpg" alt="The Fans' Legend">
+          <div class="gallery-caption">The Fans' Legend ❤️</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Showcase Section -->
+    <section class="card quote-card">
+      <blockquote>"I don't chase records, records chase me."</blockquote>
+      <cite>— Cristiano Ronaldo (CR7)</cite>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Deployed with 🔥 using <strong>AWS Amplify Hosting</strong> & <strong>GitHub</strong></p>
+    <p class="footer-sub">GBG Internship — Task 3, Part 1 | Created by Adham Saeed</p>
+  </footer>
+
+  <!-- JavaScript Calculation -->
+  <script>
+    const CURRENT_GOALS = 979; 
+    const TARGET_GOALS = 1000;
+    const remainingGoals = TARGET_GOALS - CURRENT_GOALS;
+    const percentage = ((CURRENT_GOALS / TARGET_GOALS) * 100).toFixed(1);
+
+    document.getElementById('goals-count').innerText = CURRENT_GOALS.toLocaleString();
+    document.getElementById('progress-bar').style.width = percentage + '%';
+    document.getElementById('progress-percent').innerText = percentage + '%';
+    document.getElementById('goals-remaining').innerText = remainingGoals;
+  </script>
+
+</body>
+</html>
